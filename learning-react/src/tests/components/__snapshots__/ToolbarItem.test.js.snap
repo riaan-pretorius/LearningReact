@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ToolbarItem Test Snapshot 1`] = `
+<li
+  className="nav-item"
+>
+  <a
+    aria-current="true"
+    className="nav-link active"
+    href="/"
+    onClick={[Function]}
+    style={Object {}}
+  >
+    Testing
+  </a>
+</li>
+`;

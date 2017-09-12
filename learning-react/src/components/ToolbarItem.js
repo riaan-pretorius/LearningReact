@@ -1,20 +1,24 @@
 import React, { Component } from 'react';
-import { NavItem, NavLink } from 'reactstrap';
+import { NavItem } from 'reactstrap';
+import {
+    BrowserRouter as Router,
+    Route,
+    NavLink
+  } from 'react-router-dom'
 
 
 class ToolbarItem extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            href: props.href,
-            text: props.text,
-            active: props.active
+            to: props.to,
+            text: props.text
         }
     }
     render() {
         return (
             <NavItem>
-                <NavLink href={this.state.href} active={this.state.active}>{this.state.text}</NavLink>
+                <NavLink to={this.state.to} className="nav-link" exact>{this.state.text}</NavLink>
             </NavItem>
         )
     }

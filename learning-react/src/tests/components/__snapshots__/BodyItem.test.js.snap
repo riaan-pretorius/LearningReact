@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BodyItem Test Snapshot 1`] = `
+<div
+  className="col col-sm-6"
+>
+  <h4>
+    Testing
+  </h4>
+  <p>
+    Testing SubText
+  </p>
+</div>
+`;

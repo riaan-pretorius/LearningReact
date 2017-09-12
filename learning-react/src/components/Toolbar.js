@@ -1,6 +1,11 @@
 import React, { Component } from 'react';
-import { Row, Col, Nav, NavItem, NavLink } from 'reactstrap';
+import { Row, Col, Nav } from 'reactstrap';
 import ToolbarItem from './ToolbarItem'
+import {
+    BrowserRouter as Router,
+    Route,
+    Link
+  } from 'react-router-dom'
 
 
 class Toolbar extends Component {
@@ -12,8 +17,8 @@ class Toolbar extends Component {
         }
     }
     getLinks() {
-        return this.state.links.map((link) => {
-            return <ToolbarItem href={link.href} text={link.text} active={link.active} />
+        return this.state.links.map((link, index) => {
+            return <ToolbarItem key={index} to={link.to} text={link.text} />
         })
     }
     render() {
@@ -25,7 +30,7 @@ class Toolbar extends Component {
                 </Col>
                 <Col sm="8">
                     <Nav style={styles.nav} pills>
-                        {this.getLinks()}
+                        { this.getLinks() }
                     </Nav>
                 </Col>
                 </Row>

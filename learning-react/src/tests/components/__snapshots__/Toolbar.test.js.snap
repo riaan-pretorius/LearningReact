@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Toolbar Test Snapshot 1`] = `
+<div
+  className="col"
+>
+  <div
+    className="row"
+  >
+    <div
+      className="col col-sm-4"
+    >
+      <h3
+        className="text-muted"
+      >
+        Testing
+      </h3>
+    </div>
+    <div
+      className="col col-sm-8"
+    >
+      <ul
+        className="nav nav-pills"
+        style={
+          Object {
+            "float": "right",
+          }
+        }
+      >
+        <li
+          className="nav-item"
+        >
+          <a
+            aria-current={false}
+            className="nav-link"
+            href="#"
+            onClick={[Function]}
+            style={undefined}
+          >
+            Testing
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+`;
