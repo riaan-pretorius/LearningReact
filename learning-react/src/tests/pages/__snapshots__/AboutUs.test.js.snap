@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AboutUs Test Snapshot 1`] = `
+<div
+  className="col"
+>
+  <h1>
+    About Us
+  </h1>
+  <p>
+    We got nothing
+  </p>
+</div>
+`;

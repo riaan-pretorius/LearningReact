@@ -1,0 +1,94 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ContactUs Test Snapshot 1`] = `
+<div
+  className="col"
+>
+  <div
+    className="jumbotron"
+    style={
+      Object {
+        "textAlign": "center",
+      }
+    }
+  >
+    <h1>
+      Jumbotron heading
+    </h1>
+    <p>
+      Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+    </p>
+    <button
+      className="btn btn-success"
+      onClick={[Function]}
+      type={undefined}
+    >
+      Sign up today
+    </button>
+  </div>
+  <div
+    className="row"
+  >
+    <div
+      className="col col-sm-6"
+    >
+      <h4>
+        Subheading
+      </h4>
+      <p>
+        Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.
+      </p>
+    </div>
+    <div
+      className="col col-sm-6"
+    >
+      <h4>
+        Subheading
+      </h4>
+      <p>
+        Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.
+      </p>
+    </div>
+    <div
+      className="col col-sm-6"
+    >
+      <h4>
+        Subheading
+      </h4>
+      <p>
+        Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.
+      </p>
+    </div>
+    <div
+      className="col col-sm-6"
+    >
+      <h4>
+        Subheading
+      </h4>
+      <p>
+        Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.
+      </p>
+    </div>
+    <div
+      className="col col-sm-6"
+    >
+      <h4>
+        Subheading
+      </h4>
+      <p>
+        Maecenas sed diam eget risus varius blandit sit amet non magna.
+      </p>
+    </div>
+    <div
+      className="col col-sm-6"
+    >
+      <h4>
+        Subheading
+      </h4>
+      <p>
+        Maecenas sed diam eget risus varius blandit sit amet non magna.
+      </p>
+    </div>
+  </div>
+</div>
+`;

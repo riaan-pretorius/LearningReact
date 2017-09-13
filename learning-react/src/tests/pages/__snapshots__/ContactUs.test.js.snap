@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ContactUs Test Snapshot 1`] = `
+<div
+  className="col"
+>
+  <h1>
+    Contact Us
+  </h1>
+  <p>
+    Please dont contact us.
+  </p>
+</div>
+`;
