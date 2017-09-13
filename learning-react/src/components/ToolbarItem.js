@@ -1,7 +1,7 @@
 // @flow
 import React, { Component } from "react";
 import { NavItem } from "reactstrap";
-import { BrowserRouter as Router, Route, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 type Props = {
   to: string,

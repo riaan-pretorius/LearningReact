@@ -2,7 +2,6 @@
 import React, { Component } from "react";
 import { Row, Col, Nav } from "reactstrap";
 import ToolbarItem from "./ToolbarItem";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 type Props = {
   title: string,
