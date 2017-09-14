@@ -13,6 +13,7 @@ import {
   Media
 } from "reactstrap";
 import axios from "axios";
+import UserProfile from "./UserProfile";
 
 type Props = {
   searchText: string,
@@ -35,7 +36,6 @@ class UserSearch extends Component<Props, State> {
     };
   }
   getUsers = () => {
-    //TODO: Get users from github
     axios
       .get("https://api.github.com/search/users?q=" + this.state.searchText)
       .then(response => {
@@ -101,11 +101,7 @@ class UserSearch extends Component<Props, State> {
         </Col>
         <Col sm={8}>
           {this.state.currentUser ? (
-            <Media
-              object
-              data-src={this.state.currentUser.avatar_url}
-              alt="Generic placeholder image"
-            />
+            <UserProfile username={this.state.currentUser.login} />
           ) : (
             ""
           )}
