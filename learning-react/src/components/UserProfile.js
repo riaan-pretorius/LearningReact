@@ -1,19 +1,6 @@
 // @flow
 import React, { Component } from "react";
-import {
-  Row,
-  Col,
-  Form,
-  FormGroup,
-  Label,
-  Input,
-  Card,
-  CardBlock,
-  CardTitle,
-  CardSubtitle,
-  CardText,
-  CardLink
-} from "reactstrap";
+import { Col, Card, CardBlock, CardTitle, CardSubtitle } from "reactstrap";
 import axios from "axios";
 
 type Props = {
@@ -21,7 +8,7 @@ type Props = {
 };
 type State = {
   username: string,
-  user: Object,
+  user: ?Object,
   loading: boolean
 };
 
@@ -29,25 +16,35 @@ class UserProfile extends Component<Props, State> {
   constructor(props: Props) {
     super(props);
     this.state = {
-      loading: false
+      loading: false,
+      username: props.username,
+      user: null
     };
-    this.getUser(props.username);
+    //this.getUser(props.username);
+  }
+  componentDidMount() {
+    this.getUser(this.state.username);
   }
   componentWillReceiveProps(newProps) {
-    this.setState({ username: newProps.username });
     this.getUser(newProps.username);
   }
-  getUser(username) {
-    this.setState({ loading: true });
-    axios.get("https://api.github.com/users/" + username).then(response => {
-      console.log(response);
-      this.setState({
-        username: username,
-        user: response.data,
-        loading: false
-      });
-    });
-  }
+  getUser = (username: string) => {
+    if (this.state.username !== username) {
+      this.setState({ loading: true });
+      axios
+        .get("https://api.github.com/users/" + username)
+        .then(response => {
+          this.setState({
+            username: username,
+            user: response.data,
+            loading: false
+          });
+        })
+        .catch(function() {
+          console.log("Promise Rejected");
+        });
+    }
+  };
   render() {
     return (
       <Col>
@@ -68,7 +65,7 @@ class UserProfile extends Component<Props, State> {
               </CardBlock>
               <img
                 src={this.state.user.avatar_url}
-                alt="Generic placeholder image"
+                alt="Generic placeholder"
                 style={styles.profileImage}
               />
             </Card>

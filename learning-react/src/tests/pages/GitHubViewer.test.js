@@ -13,6 +13,18 @@ test("GitHubViewer Test", () => {
   const page = mount(<GitHubViewer />);
 
   expect(page.find(".userSearch").exists()).toBeTruthy();
-  expect(page.find(".userResults").exists()).toBeTruthy();
-  expect(page.find(".userProfile").exists()).toBeTruthy();
+  expect(page.find("input").exists()).toBeTruthy();
+  expect(page.find("button").exists()).toBeTruthy();
+
+  page.find("input").text("riaan-pretorius");
+  page.find("button").simulate("click");
+
+  // setTimeout(() => {
+  //   expect(page.find(".userResults").exists()).toBeTruthy();
+  //   expect(page.find("li").exists()).toBeTruthy();
+  //   page.find("li").simulate("click");
+  //   setTimeout(() => {
+  //     expect(page.find(".userProfile").exists()).toBeTruthy();
+  //   });
+  // }, 2000);
 });

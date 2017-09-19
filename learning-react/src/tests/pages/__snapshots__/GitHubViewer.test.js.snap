@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`GitHubViewer Test Snapshot 1`] = `
+<div
+  className="row"
+>
+  <div
+    className="col col-sm-4"
+    style={
+      Object {
+        "borderRight": "5px",
+        "borderRightStyle": "groove",
+      }
+    }
+  >
+    <form
+      className=""
+    >
+      <div
+        className="userSearch input-group"
+      >
+        <input
+          className="form-control"
+          onChange={[Function]}
+          placeholder="Search github user"
+          type="text"
+        />
+        <div
+          className="input-group-btn"
+        >
+          <button
+            className="btn btn-secondary disabled"
+            disabled={true}
+            onClick={[Function]}
+            type="button"
+          >
+            Search
+          </button>
+        </div>
+      </div>
+    </form>
+    
+  </div>
+  <div
+    className="col col-sm-8"
+  >
+    
+  </div>
+</div>
+`;

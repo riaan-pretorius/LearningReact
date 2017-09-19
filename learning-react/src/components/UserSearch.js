@@ -9,8 +9,7 @@ import {
   InputGroupButton,
   Button,
   ListGroup,
-  ListGroupItem,
-  Media
+  ListGroupItem
 } from "reactstrap";
 import axios from "axios";
 import UserProfile from "./UserProfile";
@@ -23,7 +22,7 @@ type Props = {
 type State = {
   searchText: string,
   result: Array<Object>,
-  currentUser: Object
+  currentUser: ?Object
 };
 
 class UserSearch extends Component<Props, State> {
@@ -39,19 +38,20 @@ class UserSearch extends Component<Props, State> {
     axios
       .get("https://api.github.com/search/users?q=" + this.state.searchText)
       .then(response => {
-        this.setState({
-          result: response.data.items
-        });
+        this.setState({ result: response.data.items });
+      })
+      .catch(function() {
+        console.log("Promise Rejected");
       });
   };
-  getUserList() {
+  getUserList = () => {
     return this.state.result.map((item, index) => {
       return (
         <ListGroupItem
           key={index}
           action
           active={
-            this.state.currentUser != null ? (
+            this.state.currentUser !== null ? (
               this.state.currentUser.id === item.id
             ) : (
               false
@@ -67,13 +67,13 @@ class UserSearch extends Component<Props, State> {
         </ListGroupItem>
       );
     });
-  }
+  };
   render() {
     return (
       <Row>
         <Col sm={4} style={styles.box}>
           <Form>
-            <InputGroup>
+            <InputGroup className="userSearch">
               <Input
                 placeholder="Search github user"
                 onChange={event => {
@@ -91,7 +91,7 @@ class UserSearch extends Component<Props, State> {
             </InputGroup>
           </Form>
           {this.state.result.length > 0 ? (
-            <Col>
+            <Col className="userResults">
               <h4>Search results</h4>
               <ListGroup>{this.getUserList()}</ListGroup>
             </Col>

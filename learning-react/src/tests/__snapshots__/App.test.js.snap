@@ -61,6 +61,19 @@ exports[`App Test Snapshot 1`] = `
                   <a
                     aria-current={false}
                     className="nav-link"
+                    href="/githubviewer"
+                    onClick={[Function]}
+                    style={undefined}
+                  >
+                    GitHub Viewer
+                  </a>
+                </li>
+                <li
+                  className="nav-item"
+                >
+                  <a
+                    aria-current={false}
+                    className="nav-link"
                     href="/about"
                     onClick={[Function]}
                     style={undefined}
