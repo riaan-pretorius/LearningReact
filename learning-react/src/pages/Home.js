@@ -34,7 +34,7 @@ const bodyItems = [
   }
 ];
 
-class Home extends Component {
+class Home extends Component<{}, {}> {
   getBodyItems() {
     return bodyItems.map((item, index) => {
       return (

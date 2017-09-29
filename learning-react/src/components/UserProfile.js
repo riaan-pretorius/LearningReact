@@ -25,7 +25,7 @@ class UserProfile extends Component<Props, State> {
   componentDidMount() {
     this.getUser(this.state.username);
   }
-  componentWillReceiveProps(newProps) {
+  componentWillReceiveProps(newProps: Props) {
     this.getUser(newProps.username);
   }
   getUser = (username: string) => {
