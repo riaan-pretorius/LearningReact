@@ -34,7 +34,7 @@ class App extends Component {
   }
   signIn = () => {
     debugger;
-    const clientId = "7fef0088f6e3becb9e5ec3bcc8d42f8f9710e9fd ";
+    const clientId = localStorage.Test;
     axios
       .get("https://api.github.com/?access_token=" + clientId)
       .then(response => {
