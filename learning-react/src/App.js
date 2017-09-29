@@ -8,7 +8,6 @@ import Secure from "./pages/Secure";
 import SignIn from "./pages/SignIn";
 import { Container, Row, Col } from "reactstrap";
 import { BrowserRouter as Router, Route, Redirect } from "react-router-dom";
-import { browserHistory } from "react-router";
 import axios from "axios";
 
 import "./css/bootstrap.css";
@@ -51,8 +50,6 @@ class App extends Component {
     //this.context.router.history.push("/secure");
   };
   signOut = () => {
-    const clientId = "1ac8baf1ca24643c6dd4";
-
     this.setState({ isSignedIn: false });
   };
   isSignedIn() {

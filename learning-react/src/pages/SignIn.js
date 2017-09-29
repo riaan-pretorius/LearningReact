@@ -1,11 +1,5 @@
 import React, { Component } from "react";
-import {
-  BrowserRouter as Router,
-  Route,
-  Link,
-  Redirect,
-  withRouter
-} from "react-router-dom";
+import { Redirect } from "react-router-dom";
 import { Button } from "reactstrap";
 
 class SignIn extends Component {
